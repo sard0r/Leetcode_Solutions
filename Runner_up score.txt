@@ -1,0 +1,16 @@
+# https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem
+
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    
+    max = -100
+    second_best = -100
+    
+    arrays = list(sorted(arr))
+    
+    for i in range(len(arrays)):
+        if arrays[i] > max:
+            second_best = max
+            max = arrays[i]
